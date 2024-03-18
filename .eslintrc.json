@@ -1,39 +1,63 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "prettier"
-  ],
-  "overrides": [
-    {
-      // enable eslint-plugin-testing-library rules or preset only for matching files!
-      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      "extends": ["plugin:jest/recommended", "plugin:jest-dom/recommended", "plugin:testing-library/react"]
-    },
-    {
-      "files": ["**/*.ts?(x)"],
-      "parser": "@typescript-eslint/parser",
-      "extends": ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"]
-    }
-  ],
-  "rules": {
-    // for testing if eslint works properly,
-    // feel free to remove this if you do not need it
-    "import/no-unused-modules": [1, { "unusedExports": true }]
-  },
-  "settings": {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
-    },
-    "import/resolver": {
-      "typescript": {}
-    },
-    "react": {
-      "version": "detect"
-    }
-  }
+	"plugins": ["@typescript-eslint/eslint-plugin", "react", "prettier", "react-hooks"],
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:import/recommended",
+		"plugin:react/jsx-runtime",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"overrides": [
+		{
+			"files": ["**/*.ts?(x)"],
+			"parser": "@typescript-eslint/parser",
+			"extends": ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"]
+		}
+	],
+	"rules": {
+		"prettier/prettier": "warn",
+		"camelcase": [0, { "properties": "never" }],
+		"@typescript-eslint/camelcase": [0, { "properties": "never" }],
+		"react/prop-types": [0],
+		"@typescript-eslint/no-use-before-define": [0],
+		"@typescript-eslint/ban-ts-comment": [0, { "properties": "never" }],
+		"@typescript-eslint/ban-types": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"delimiter": "none"
+				}
+			}
+		],
+		"prefer-const": [0],
+		"@typescript-eslint/prefer-const": [0, { "destructuring": "any" }],
+		"@typescript-eslint/explicit-function-return-type": [0],
+		"@typescript-eslint/no-explicit-any": [0],
+		"react/display-name": ["warn"],
+		"react/no-unescaped-entities": [0],
+		"react/no-deprecated": ["warn"],
+		"@typescript-eslint/no-empty-interface": ["warn"],
+		"react/jsx-key": ["warn"],
+		"@typescript-eslint/no-extra-semi": ["warn"],
+		"@typescript-eslint/no-empty-function": [0],
+		"@typescript-eslint/no-unused-vars": [0],
+		"react/jsx-uses-react": 0,
+		"react/react-in-jsx-scope": 0,
+		"import/no-unused-modules": [1, { "unusedExports": true }]
+	},
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {}
+		},
+		"react": {
+			"version": "detect"
+		}
+	}
 }

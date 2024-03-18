@@ -1,7 +1,32 @@
 {
-  "editor.tabSize": 2,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "editor.formatOnSave": true,
-  "prettier.documentSelectors": ["*.{tsx,ts}", "*.{jsx,js}"],
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"files.exclude": {
+		"**/node_modules": true
+	},
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/_build": true,
+		"**/deps": true,
+		"**/dist": true,
+		"**/.cache": true,
+		"typescript/**": true
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/**": true,
+		"**/bower_components": true,
+		"**/_build": true,
+		"**/deps": true
+	},
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
+	"editor.formatOnSave": true,
+	"prettier.documentSelectors": ["*.{tsx,ts}", "*.{jsx,js}"],
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
