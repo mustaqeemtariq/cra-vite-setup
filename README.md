@@ -9,24 +9,11 @@
 
 ---
 
-### Extra Additions
-- Conventional Commits using `Commitlint`
-- Run Lint Checks, TS Checks, Formatting & Unit Tests  in Pre-commit via `lintstaged` & `husky`
-
----
-
-### Usage (with [degit](https://github.com/Rich-Harris/degit))
-```bash
-degit uchihamalolan/vite-react-ts your-app-name
-```
-
----
-
 ### Tech Stack - Overview
 - Vite
 - React - Typscript
   - react-error-boundary
-- pnpm
+- npm
 
 ---
 
@@ -43,12 +30,6 @@ degit uchihamalolan/vite-react-ts your-app-name
   - react
   - react hooks
   - typescript
-  - jsx-a11y
-
----
-
-### Testing
-- Jest + React Testing Library (plus some plugins)
 
 ---
 
@@ -61,14 +42,7 @@ degit uchihamalolan/vite-react-ts your-app-name
 
 ### Forms
 - React Hook Form
-- Zod (for validations)
-
-### CSS-in-js
-- Emotion
-- Complie Time Atomic CSS-in-Js
-  - Stylex (Facebook, not Open Source yet)
-  - Linaria
-  - Compiled (still in beta)
+- Yup (for validations)
 
 ### Routing
 - React-Router-Dom
