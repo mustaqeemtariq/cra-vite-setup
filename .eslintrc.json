@@ -3,7 +3,6 @@
 	"parser": "@typescript-eslint/parser",
 	"extends": [
 		"plugin:react/recommended",
-		"plugin:import/recommended",
 		"plugin:react/jsx-runtime",
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
