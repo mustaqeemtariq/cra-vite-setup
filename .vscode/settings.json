@@ -25,8 +25,6 @@
 		"**/deps": true
 	},
 	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-	"editor.formatOnSaveMode": "modificationsIfAvailable",
-	"editor.formatOnSave": true,
 	"prettier.documentSelectors": ["*.{tsx,ts}", "*.{jsx,js}"],
 	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
