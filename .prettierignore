@@ -1,5 +1,3 @@
-node_modules
-dist
-coverage
-.eslintcache
-pnpm-lock.yaml
+build
+
+src/styles/main.css

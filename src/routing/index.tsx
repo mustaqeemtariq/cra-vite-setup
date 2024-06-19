@@ -1,5 +1,6 @@
-import { Home } from 'pages/home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import { Home } from '@/pages/home'
 
 const Routing = () => {
 	return (
