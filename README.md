@@ -2,17 +2,15 @@
 
 ### Things in CRA, supported here:
 - Import SVG's directly as React Component via SVGR
-- Unit Testing via Jest & React Testing Library
 - ESLint Rules & Prettier
 - Tailwind
-- Absolute imports within `src` directory
+- Support for path aliases
 
 ---
 
 ### Tech Stack - Overview
 - Vite
 - React - Typscript
-  - react-error-boundary
 - npm
 
 ---
@@ -20,15 +18,13 @@
 ### Editor Config
 
 - vscode settings & extension recommendations
-- `.editorconfig` file
-
+  
 ---
 
 ### Lint and Formatting
 - Eslint & Prettier Configured
 - Lints
   - react
-  - react hooks
   - typescript
 
 ---
@@ -46,22 +42,15 @@
 
 ### Routing
 - React-Router-Dom
-- React Location
 
 ### Date Manipulation
-- Dayjs
-- date-fns
 - Luxon
 
 ### HTTP Client
-- Ky
 - Axios
 
 ### Global Store (full-blown / lite-version)
 - Redux Toolkit / Zustand
-- Recoil / Jotai
-- Mobx / Valtio
-- xstate / robot
 
 ### Server State
 - React Query
