@@ -21,7 +21,6 @@ module.exports = {
   ignorePatterns: ['build', '.eslintrc.js'],
   parserOptions: {
     ecmaVersion: 'latest',
-    project: './tsconfig.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
     ecmaFeatures: {
