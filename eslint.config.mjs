@@ -39,14 +39,6 @@ export default [
 			'@typescript-eslint/ban-ts-comment': 'off',
 			'@typescript-eslint/ban-types': 'off',
 			'@typescript-eslint/explicit-module-boundary-types': 'off',
-			'@typescript-eslint/member-delimiter-style': [
-				'error',
-				{
-					multiline: {
-						delimiter: 'none',
-					},
-				},
-			],
 			'prefer-const': 'off',
 			'@typescript-eslint/prefer-const': 'off',
 			'@typescript-eslint/explicit-function-return-type': 'off',
@@ -56,7 +48,7 @@ export default [
 			'react/no-deprecated': 'warn',
 			'@typescript-eslint/no-empty-interface': 'warn',
 			'react/jsx-key': 'warn',
-			'@typescript-eslint/no-extra-semi': 'warn',
+			'no-extra-semi': 'warn',
 			'@typescript-eslint/no-empty-function': 'off',
 			'@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
 			'react/jsx-uses-react': 'off',
