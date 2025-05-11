@@ -10,6 +10,11 @@ export default [
 		ignores: ['build', 'node_modules', 'dist', 'tailwind.config.js'],
 	},
 	{
+		env: {
+			browser: true,
+		},
+	},
+	{
 		files: ['**/*.js', '**/*.ts', '**/*.tsx'],
 		languageOptions: {
 			parser: tsParser,
