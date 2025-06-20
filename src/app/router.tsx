@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Home } from '@/pages/home'
+import { Home } from '@/features/home'
 
-const Routing = () => {
+const Router = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -12,4 +12,4 @@ const Routing = () => {
 	)
 }
 
-export default Routing
+export default Router

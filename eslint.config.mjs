@@ -1,6 +1,7 @@
 import js from '@eslint/js'
 import ts from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
+import checkFile from 'eslint-plugin-check-file'
 import prettier from 'eslint-plugin-prettier'
 import react from 'eslint-plugin-react'
 
@@ -10,21 +11,16 @@ export default [
 		ignores: ['build', 'node_modules', 'dist', 'tailwind.config.js'],
 	},
 	{
-		env: {
-			browser: true,
-		},
-	},
-	{
 		files: ['**/*.js', '**/*.ts', '**/*.tsx'],
 		languageOptions: {
 			parser: tsParser,
 			ecmaVersion: 'latest',
 			sourceType: 'module',
 			globals: {
-        document: 'readonly',
-        window: 'readonly',
-				navigator: 'readonly'
-      },
+				document: 'readonly',
+				window: 'readonly',
+				navigator: 'readonly',
+			},
 			parserOptions: {
 				tsconfigRootDir: import.meta.dirname,
 				ecmaFeatures: {
@@ -36,6 +32,7 @@ export default [
 			'@typescript-eslint': ts,
 			react,
 			prettier,
+			'check-file': checkFile,
 		},
 		rules: {
 			'prettier/prettier': 'warn',
@@ -59,6 +56,21 @@ export default [
 			'react/jsx-uses-react': 'off',
 			'react/react-in-jsx-scope': 'off',
 			semi: ['error', 'never'],
+			'check-file/filename-naming-convention': [
+				'error',
+				{
+					'**/*.{ts,tsx}': 'KEBAB_CASE',
+				},
+				{
+					ignoreMiddleExtensions: true,
+				},
+			],
+			'check-file/folder-naming-convention': [
+				'error',
+				{
+					'src/**/!(__tests__)': 'KEBAB_CASE',
+				},
+			],
 		},
 		settings: {
 			react: {
