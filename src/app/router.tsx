@@ -1,15 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { Home } from '@/features/home'
+const Home = lazy(() => import('@/features/home'))
 
-const Router = () => {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-			</Routes>
-		</BrowserRouter>
-	)
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: (
+			<Suspense fallback={<div>Loading...</div>}>
+				<Home />
+			</Suspense>
+		),
+	},
+])
+
+const AppRouter = () => {
+	return <RouterProvider router={router} />
 }
 
-export default Router
+export default AppRouter
