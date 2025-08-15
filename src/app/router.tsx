@@ -1,16 +1,21 @@
-import { lazy, Suspense } from 'react'
+import Home from '@/features/home'
+import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const Home = lazy(() => import('@/features/home'))
+const About = lazy(() => import('@/features/about'))
+
+const withSuspense = (component: React.ReactNode) => (
+	<Suspense fallback={<div>Loading...</div>}>{component}</Suspense>
+)
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: (
-			<Suspense fallback={<div>Loading...</div>}>
-				<Home />
-			</Suspense>
-		),
+		element: <Home />,
+	},
+	{
+		path: '/about',
+		element: withSuspense(<About />),
 	},
 ])
 

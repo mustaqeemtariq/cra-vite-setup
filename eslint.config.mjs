@@ -4,6 +4,7 @@ import tsParser from '@typescript-eslint/parser'
 import checkFile from 'eslint-plugin-check-file'
 import prettier from 'eslint-plugin-prettier'
 import react from 'eslint-plugin-react'
+import globals from 'globals'
 
 export default [
 	js.configs.recommended,
@@ -16,11 +17,8 @@ export default [
 			parser: tsParser,
 			ecmaVersion: 'latest',
 			sourceType: 'module',
-			env: 'browser',
 			globals: {
-				document: 'readonly',
-				window: 'readonly',
-				navigator: 'readonly',
+				...globals.browser,
 			},
 			parserOptions: {
 				tsconfigRootDir: import.meta.dirname,
