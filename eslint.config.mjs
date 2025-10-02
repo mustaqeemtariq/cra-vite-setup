@@ -51,7 +51,10 @@ export default [
 			'react/jsx-key': 'warn',
 			'no-extra-semi': 'warn',
 			'@typescript-eslint/no-empty-function': 'off',
-			'@typescript-eslint/no-unused-vars-experimental': 'warn',
+			'@typescript-eslint/no-unused-vars': [
+				'warn',
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+			],
 			'react/jsx-uses-react': 'off',
 			'react/react-in-jsx-scope': 'off',
 			semi: ['error', 'never'],
