@@ -51,7 +51,7 @@ export default [
 			'react/jsx-key': 'warn',
 			'no-extra-semi': 'warn',
 			'@typescript-eslint/no-empty-function': 'off',
-			'@typescript-eslint/no-unused-vars': [
+			'@typescript-eslint/no-unused-vars-experimental': [
 				'warn',
 				{ argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
 			],
